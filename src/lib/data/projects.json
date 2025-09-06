@@ -1,0 +1,89 @@
+{
+    "title": "Featured Projects",
+    "projects": [
+        {
+            "title": "E-commerce Platform",
+            "slug": "e-commerce-platform",
+            "imageUrl": "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
+            "tech": "React • Node.js • MongoDB",
+            "description": "Full-featured e-commerce platform with payment integration, inventory management, and analytics dashboard.",
+            "liveUrl": "#",
+            "githubUrl": "#",
+            "tags": ["React", "Node.js"],
+            "date": "2023-01-15",
+            "images": [
+                "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
+                "https://images.pexels.com/photos/2653362/pexels-photo-2653362.jpeg?auto=compress&cs=tinysrgb&w=800",
+                "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800"
+            ],
+            "details": {
+                "technologies_title": "Technologies:",
+                "performance_title": "Performance & Statistics:",
+                "performance_description": "Detailed performance metrics and statistics for this project would go here. This could include load times, Lighthouse scores, user engagement data, etc. (Placeholder data)",
+                "statistics": [
+                    "Initial Load Time: 1.2s",
+                    "Lighthouse Score: 95/100",
+                    "Monthly Active Users: 10,000+ (Simulated)"
+                ],
+                "live_demo_button": "Live Demo",
+                "github_repo_button": "GitHub Repo"
+            }
+        },
+        {
+            "title": "Task Management App",
+            "slug": "task-management-app",
+            "imageUrl": "https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=800",
+            "tech": "Vue.js • Express • PostgreSQL",
+            "description": "Collaborative task management application with real-time updates, team collaboration features, and advanced filtering.",
+            "liveUrl": "#",
+            "githubUrl": "#",
+            "tags": ["Vue.js", "Socket.io"],
+            "date": "2022-08-20",
+            "images": [
+                "https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=800",
+                "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800",
+                "https://images.pexels.com/photos/3184430/pexels-photo-3184430.jpeg?auto=compress&cs=tinysrgb&w=800"
+            ],
+            "details": {
+                "technologies_title": "Technologies:",
+                "performance_title": "Performance & Statistics:",
+                "performance_description": "Detailed performance metrics and statistics for this project would go here. This could include load times, Lighthouse scores, user engagement data, etc. (Placeholder data)",
+                "statistics": [
+                    "Initial Load Time: 1.5s",
+                    "Lighthouse Score: 92/100",
+                    "Weekly Active Users: 5,000+ (Simulated)"
+                ],
+                "live_demo_button": "Live Demo",
+                "github_repo_button": "GitHub Repo"
+            }
+        },
+        {
+            "title": "AI Weather Companion",
+            "slug": "ai-weather-companion",
+            "imageUrl": "https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg?auto=compress&cs=tinysrgb&w=800",
+            "tech": "React • Python • OpenAI API",
+            "description": "Intelligent weather application with AI-powered recommendations and beautiful data visualizations.",
+            "liveUrl": "#",
+            "githubUrl": "#",
+            "tags": ["React", "Python"],
+            "date": "2023-03-10",
+            "images": [
+                "https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg?auto=compress&cs=tinysrgb&w=800",
+                "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800",
+                "https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&w=800"
+            ],
+            "details": {
+                "technologies_title": "Technologies:",
+                "performance_title": "Performance & Statistics:",
+                "performance_description": "Detailed performance metrics and statistics for this project would go here. This could include load times, Lighthouse scores, user engagement data, etc. (Placeholder data)",
+                "statistics": [
+                    "API Response Time: < 500ms",
+                    "Lighthouse Score: 98/100",
+                    "Daily Active Users: 2,000+ (Simulated)"
+                ],
+                "live_demo_button": "Live Demo",
+                "github_repo_button": "GitHub Repo"
+            }
+        }
+    ]
+}

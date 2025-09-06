@@ -1,0 +1,29 @@
+{
+    "title": "Volunteer Work",
+    "experiences": [
+        {
+            "title": "Code Mentor",
+            "organization": "Code.org • 2020 - Present",
+            "description": "Teaching programming fundamentals to underserved youth and helping bridge the digital divide through technology education.",
+            "icon": "fas fa-graduation-cap text-3xl text-primary mr-4"
+        },
+        {
+            "title": "Open Source Contributor",
+            "organization": "Various Projects • 2019 - Present",
+            "description": "Contributing to open source projects including React, Vue ecosystem, and developer tools used by thousands of developers worldwide.",
+            "icon": "fab fa-github text-3xl text-secondary mr-4"
+        },
+        {
+            "title": "Tech for Good",
+            "organization": "Local Non-profits • 2021 - Present",
+            "description": "Building websites and digital solutions for local non-profit organizations to help them reach more people and amplify their impact.",
+            "icon": "fas fa-heart text-3xl text-accent mr-4"
+        },
+        {
+            "title": "Workshop Leader",
+            "organization": "Community Centers • 2020 - Present",
+            "description": "Organizing and leading web development workshops for beginners, helping them start their coding journey with hands-on projects.",
+            "icon": "fas fa-users text-3xl text-warning mr-4"
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "title": "Education",
+    "history": [
+        {
+            "degree": "Master of Computer Science",
+            "university": "Stanford University",
+            "period": "2018 - 2020",
+            "description": "Specialized in Software Engineering and Machine Learning. Graduated with honors and completed thesis on distributed systems.",
+            "markerColor": "bg-primary"
+        },
+        {
+            "degree": "Bachelor of Computer Science",
+            "university": "UC Berkeley",
+            "period": "2014 - 2018",
+            "description": "Focused on web development and database systems. Active member of coding club and hackathon organizer.",
+            "markerColor": "bg-secondary"
+        }
+    ]
+}

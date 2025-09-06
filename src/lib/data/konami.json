@@ -1,0 +1,15 @@
+{
+    "sequence": [
+        "ArrowUp",
+        "ArrowUp",
+        "ArrowDown",
+        "ArrowDown",
+        "ArrowLeft",
+        "ArrowRight",
+        "ArrowLeft",
+        "ArrowRight",
+        "KeyB",
+        "KeyA"
+    ],
+    "alertMessage": "🎉 You found the secret! Thanks for exploring my portfolio!"
+}

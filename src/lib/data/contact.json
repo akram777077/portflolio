@@ -1,0 +1,58 @@
+{
+    "title": "Get In Touch",
+    "subtitle": "Have a project in mind? Let's collaborate and create something amazing together!",
+    "letsConnectTitle": "Let's Connect",
+    "followMeTitle": "Follow Me",
+    "successMessage": "Message sent successfully! I'll get back to you soon.",
+    "errorMessage": "Failed to send message. Please try again later.",
+    "form": {
+        "firstName": {
+            "label": "First Name",
+            "placeholder": "John"
+        },
+        "lastName": {
+            "label": "Last Name",
+            "placeholder": "Doe"
+        },
+        "email": {
+            "label": "Email",
+            "placeholder": "john@example.com"
+        },
+        "subject": {
+            "label": "Subject",
+            "placeholder": "Project Collaboration"
+        },
+        "message": {
+            "label": "Message",
+            "placeholder": "Tell me about your project..."
+        },
+        "button": {
+            "send": "Send Message",
+            "sending": "Sending..."
+        }
+    },
+    "connections": [
+        {
+            "name": "Email",
+            "value": "john.doe@example.com",
+            "icon": "fas fa-envelope text-white"
+        },
+        {
+            "name": "Phone",
+            "value": "+1 (555) 123-4567",
+            "icon": "fas fa-phone text-white"
+        },
+        {
+            "name": "Location",
+            "value": "San Francisco, CA",
+            "icon": "fas fa-map-marker-alt text-white"
+        }
+    ],
+    "socials": [
+        { "name": "github", "url": "#", "icon": "fab fa-github" },
+        { "name": "linkedin", "url": "#", "icon": "fab fa-linkedin" },
+        { "name": "twitter", "url": "#", "icon": "fab fa-twitter" },
+        { "name": "instagram", "url": "#", "icon": "fab fa-instagram" }
+    ],
+    "built_with": "Built with ❤️ using Svelte, Tailwind & DaisyUI"
+}

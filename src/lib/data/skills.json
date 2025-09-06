@@ -1,0 +1,29 @@
+{
+    "title": "Skills & Technologies",
+    "categories": [
+        {
+            "name": "Frontend",
+            "icon": "fab fa-js-square text-6xl text-yellow-500 mb-4",
+            "skills": ["JavaScript", "TypeScript", "React", "Vue.js", "Tailwind"],
+            "badgeColor": "badge-primary"
+        },
+        {
+            "name": "Backend",
+            "icon": "fas fa-server text-6xl text-green-500 mb-4",
+            "skills": ["Node.js", "Python", "Express", "MongoDB", "PostgreSQL"],
+            "badgeColor": "badge-secondary"
+        },
+        {
+            "name": "Tools & DevOps",
+            "icon": "fas fa-tools text-6xl text-blue-500 mb-4",
+            "skills": ["Git", "Docker", "AWS", "Vercel", "Figma"],
+            "badgeColor": "badge-accent"
+        }
+    ],
+    "proficiencies": [
+        { "name": "JavaScript/TypeScript", "level": 95, "progressColor": "progress-primary" },
+        { "name": "React/Vue.js", "level": 90, "progressColor": "progress-secondary" },
+        { "name": "Node.js/Python", "level": 85, "progressColor": "progress-accent" },
+        { "name": "UI/UX Design", "level": 80, "progressColor": "progress-warning" }
+    ]
+}

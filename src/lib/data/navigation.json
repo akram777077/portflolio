@@ -1,0 +1,11 @@
+{
+    "navLinks": [
+        { "href": "#about", "text": "About" },
+        { "href": "#education", "text": "Education" },
+        { "href": "#skills", "text": "Skills" },
+        { "href": "#projects", "text": "Projects" },
+        { "href": "#volunteer", "text": "Volunteer" },
+        { "href": "#contact", "text": "Contact" }
+    ],
+    "sections": ["hero", "about", "education", "skills", "projects", "volunteer", "contact"]
+}
