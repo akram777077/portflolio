@@ -1,0 +1,48 @@
+{
+    "title": "Problem Solving",
+    "subtitle": "Turning complex challenges into elegant solutions",
+    "description": "I thrive on solving complex problems through innovative thinking and systematic approaches. Here are some key areas where I excel:",
+    "areas": [
+        {
+            "title": "Algorithm Design",
+            "icon": "fas fa-brain text-4xl text-primary mb-4",
+            "description": "Developing efficient algorithms for complex computational problems, optimizing performance and scalability.",
+            "examples": ["Data structure optimization", "Search algorithms", "Sorting mechanisms"]
+        },
+        {
+            "title": "System Architecture",
+            "icon": "fas fa-sitemap text-4xl text-secondary mb-4",
+            "description": "Designing scalable system architectures that handle high traffic and complex business logic.",
+            "examples": ["Microservices design", "Database optimization", "Load balancing"]
+        },
+        {
+            "title": "AI & Machine Learning",
+            "icon": "fas fa-robot text-4xl text-accent mb-4",
+            "description": "Implementing AI solutions to automate processes and extract insights from complex datasets.",
+            "examples": ["Neural networks", "Data analysis", "Predictive modeling"]
+        },
+        {
+            "title": "Performance Optimization",
+            "icon": "fas fa-tachometer-alt text-4xl text-warning mb-4",
+            "description": "Identifying bottlenecks and optimizing applications for maximum performance and user experience.",
+            "examples": ["Code optimization", "Memory management", "Caching strategies"]
+        }
+    ],
+    "achievements": [
+        {
+            "metric": "99.9%",
+            "label": "System Uptime",
+            "description": "Maintained across all deployed solutions"
+        },
+        {
+            "metric": "50+",
+            "label": "Complex Problems",
+            "description": "Successfully solved and implemented"
+        },
+        {
+            "metric": "40%",
+            "label": "Performance Boost",
+            "description": "Average improvement in optimized systems"
+        }
+    ]
+}

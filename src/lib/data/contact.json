@@ -1,58 +1,85 @@
 {
-    "title": "Get In Touch",
-    "subtitle": "Have a project in mind? Let's collaborate and create something amazing together!",
-    "letsConnectTitle": "Let's Connect",
-    "followMeTitle": "Follow Me",
-    "successMessage": "Message sent successfully! I'll get back to you soon.",
-    "errorMessage": "Failed to send message. Please try again later.",
+    "title": "Let's Create Something Amazing",
+    "subtitle": "Ready to bring your ideas to life? Let's collaborate and build the future together.",
+    "cta": "Get In Touch",
+    "letsConnectTitle": "Connect With Me",
+    "followMeTitle": "Follow My Journey",
+    "successMessage": "🚀 Message sent successfully! I'll get back to you within 24 hours.",
+    "errorMessage": "❌ Oops! Something went wrong. Please try again or reach out directly via email.",
     "form": {
         "firstName": {
             "label": "First Name",
             "placeholder": "John"
         },
         "lastName": {
-            "label": "Last Name",
+            "label": "Last Name", 
             "placeholder": "Doe"
         },
         "email": {
-            "label": "Email",
+            "label": "Email Address",
             "placeholder": "john@example.com"
         },
         "subject": {
-            "label": "Subject",
-            "placeholder": "Project Collaboration"
+            "label": "What's this about?",
+            "placeholder": "Project Collaboration, Job Opportunity, etc."
         },
         "message": {
-            "label": "Message",
-            "placeholder": "Tell me about your project..."
+            "label": "Tell me more",
+            "placeholder": "I'd love to hear about your project, ideas, or how we can work together..."
         },
         "button": {
             "send": "Send Message",
             "sending": "Sending..."
         }
     },
+    "quickActions": [
+        {
+            "title": "Schedule a Call",
+            "description": "Book a 30-minute discovery call",
+            "icon": "fas fa-calendar-alt",
+            "action": "schedule",
+            "color": "btn-primary"
+        },
+        {
+            "title": "View Resume",
+            "description": "Download my latest resume",
+            "icon": "fas fa-file-download",
+            "action": "resume",
+            "color": "btn-secondary"
+        },
+        {
+            "title": "Quick Chat",
+            "description": "Send me a direct message",
+            "icon": "fas fa-comments",
+            "action": "chat",
+            "color": "btn-accent"
+        }
+    ],
     "connections": [
         {
             "name": "Email",
-            "value": "john.doe@example.com",
-            "icon": "fas fa-envelope text-white"
+            "value": "akram.dris@example.com",
+            "icon": "fas fa-envelope text-white",
+            "link": "mailto:akram.dris@example.com"
         },
         {
             "name": "Phone",
-            "value": "+1 (555) 123-4567",
-            "icon": "fas fa-phone text-white"
+            "value": "+213 XXX XXX XXX",
+            "icon": "fas fa-phone text-white",
+            "link": "tel:+213XXXXXXX"
         },
         {
             "name": "Location",
-            "value": "San Francisco, CA",
-            "icon": "fas fa-map-marker-alt text-white"
+            "value": "Algeria",
+            "icon": "fas fa-map-marker-alt text-white",
+            "link": "#"
         }
     ],
     "socials": [
-        { "name": "github", "url": "#", "icon": "fab fa-github" },
-        { "name": "linkedin", "url": "#", "icon": "fab fa-linkedin" },
-        { "name": "twitter", "url": "#", "icon": "fab fa-twitter" },
-        { "name": "instagram", "url": "#", "icon": "fab fa-instagram" }
+        { "name": "GitHub", "url": "#", "icon": "fab fa-github" },
+        { "name": "LinkedIn", "url": "#", "icon": "fab fa-linkedin" },
+        { "name": "Twitter", "url": "#", "icon": "fab fa-twitter" },
+        { "name": "Instagram", "url": "#", "icon": "fab fa-instagram" }
     ],
-    "built_with": "Built with ❤️ using Svelte, Tailwind & DaisyUI"
+    "built_with": "Built with ❤️ using Svelte 5, Tailwind CSS & DaisyUI"
 }

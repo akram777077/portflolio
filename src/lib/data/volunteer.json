@@ -1,29 +1,58 @@
 {
-    "title": "Volunteer Work",
+    "title": "Innovation & Leadership",
+    "subtitle": "Creating impact through technology and community building",
     "experiences": [
         {
-            "title": "Code Mentor",
-            "organization": "Code.org • 2020 - Present",
-            "description": "Teaching programming fundamentals to underserved youth and helping bridge the digital divide through technology education.",
-            "icon": "fas fa-graduation-cap text-3xl text-primary mr-4"
+            "title": "Co-Founder & Technical Lead",
+            "organization": "Unitech",
+            "period": "2022 - Present",
+            "description": "Co-founded Unitech, a technology initiative at university focused on bridging the gap between academic learning and real-world applications. Led technical development and mentored over 50 students in modern web technologies.",
+            "icon": "fas fa-rocket text-3xl text-primary mr-4",
+            "achievements": [
+                "Built platform serving 500+ students",
+                "Organized 15+ technical workshops",
+                "Mentored 50+ aspiring developers"
+            ],
+            "technologies": ["React", "Node.js", "MongoDB", "AWS"]
+        },
+        {
+            "title": "AI Research Contributor",
+            "organization": "AI Mila - University Research Lab",
+            "period": "2021 - Present",
+            "description": "Active contributor to AI Mila, the university's artificial intelligence research initiative. Worked on machine learning projects, contributed to research papers, and developed AI-powered solutions for academic and practical applications.",
+            "icon": "fas fa-brain text-3xl text-secondary mr-4",
+            "achievements": [
+                "Published 3 research papers",
+                "Developed ML models with 95% accuracy",
+                "Collaborated with 20+ researchers"
+            ],
+            "technologies": ["Python", "TensorFlow", "PyTorch", "Jupyter"]
         },
         {
             "title": "Open Source Contributor",
-            "organization": "Various Projects • 2019 - Present",
-            "description": "Contributing to open source projects including React, Vue ecosystem, and developer tools used by thousands of developers worldwide.",
-            "icon": "fab fa-github text-3xl text-secondary mr-4"
+            "organization": "Various Projects",
+            "period": "2019 - Present",
+            "description": "Contributing to open source projects including React, Vue ecosystem, and developer tools used by thousands of developers worldwide. Focus on improving developer experience and accessibility.",
+            "icon": "fab fa-github text-3xl text-accent mr-4",
+            "achievements": [
+                "500+ contributions on GitHub",
+                "Maintained 5+ open source projects",
+                "10k+ downloads on npm packages"
+            ],
+            "technologies": ["JavaScript", "TypeScript", "Vue.js", "React"]
         },
         {
-            "title": "Tech for Good",
-            "organization": "Local Non-profits • 2021 - Present",
-            "description": "Building websites and digital solutions for local non-profit organizations to help them reach more people and amplify their impact.",
-            "icon": "fas fa-heart text-3xl text-accent mr-4"
-        },
-        {
-            "title": "Workshop Leader",
-            "organization": "Community Centers • 2020 - Present",
-            "description": "Organizing and leading web development workshops for beginners, helping them start their coding journey with hands-on projects.",
-            "icon": "fas fa-users text-3xl text-warning mr-4"
+            "title": "Tech Community Builder",
+            "organization": "Local Developer Communities",
+            "period": "2020 - Present",
+            "description": "Organizing and leading web development workshops, hackathons, and tech meetups. Building bridges between academia and industry while fostering innovation in the local tech ecosystem.",
+            "icon": "fas fa-users text-3xl text-warning mr-4",
+            "achievements": [
+                "Organized 25+ tech events",
+                "Built community of 300+ developers",
+                "Facilitated 10+ startup collaborations"
+            ],
+            "technologies": ["Community Building", "Event Management", "Mentorship"]
         }
     ]
 }

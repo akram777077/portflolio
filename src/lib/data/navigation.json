@@ -3,9 +3,10 @@
         { "href": "#about", "text": "About" },
         { "href": "#education", "text": "Education" },
         { "href": "#skills", "text": "Skills" },
+        { "href": "#problem-solving", "text": "Problem Solving" },
         { "href": "#projects", "text": "Projects" },
-        { "href": "#volunteer", "text": "Volunteer" },
+        { "href": "#volunteer", "text": "Innovation" },
         { "href": "#contact", "text": "Contact" }
     ],
-    "sections": ["hero", "about", "education", "skills", "projects", "volunteer", "contact"]
+    "sections": ["hero", "about", "education", "skills", "problem-solving", "projects", "volunteer", "contact"]
 }

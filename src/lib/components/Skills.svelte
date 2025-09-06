@@ -1,5 +1,4 @@
 <script lang="ts">
-	import ScrollProgress from '$lib/components/ScrollProgress.svelte';
 	import { scrollAnimation } from '$lib/actions/scrollAnimation';
 
 	let { skills } = $props<{ skills: any }>();
@@ -25,21 +24,6 @@
 					</div>
 				</div>
 			{/each}
-		</div>
-
-		<div class="mt-16 max-w-3xl mx-auto">
-			<h3 class="text-2xl font-semibold mb-8 text-center">Proficiency Levels</h3>
-			<div class="space-y-6">
-				{#each skills.proficiencies as proficiency}
-					<div use:scrollAnimation class="animate-on-scroll">
-						<div class="flex justify-between mb-2">
-							<span class="font-medium">{proficiency.name}</span>
-							<span class="text-sm opacity-70">{proficiency.level}%</span>
-						</div>
-						<ScrollProgress level={proficiency.level} progressColor={proficiency.progressColor} />
-					</div>
-				{/each}
-			</div>
 		</div>
 	</div>
 </section>
