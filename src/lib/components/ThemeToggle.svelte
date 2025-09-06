@@ -2,6 +2,7 @@
     import { onMount } from 'svelte';
 
 	let theme = $state('light');
+	let isTransitioning = $state(false);
 
     onMount(() => {
         const savedTheme = localStorage.getItem('theme');
@@ -16,58 +17,66 @@
 	});
 
 	function toggleTheme() {
+		if (isTransitioning) return; // Prevent multiple rapid toggles
+		
+		isTransitioning = true;
 		const newTheme = theme === 'light' ? 'dark' : 'light';
+
+		// Add smooth transition class to body
+		document.body.classList.add('theme-transitioning');
+		
+		// Create a smooth fade effect
+		document.documentElement.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+
+		// Apply the theme change
 		theme = newTheme;
-
-		// Apply staggered transitions
-		document.body.classList.add('theme-changing'); // Add a class to body to temporarily disable other transitions if needed
-
-		// Background transition (immediate)
 		document.documentElement.setAttribute('data-theme', newTheme);
 
-		// Navbar transition (delay 0.1s)
+		// Staggered element transitions for a wave effect
 		setTimeout(() => {
-			const navbar = document.querySelector('nav');
-			if (navbar) {
-				navbar.classList.add('transition-nav');
-			}
+			// Navbar elements
+			document.querySelectorAll('nav, .navbar').forEach((el, index) => {
+				(el as HTMLElement).style.transition = `all 0.5s cubic-bezier(0.4, 0, 0.2, 1) ${index * 0.05}s`;
+			});
+		}, 50);
+
+		setTimeout(() => {
+			// Cards and major sections
+			document.querySelectorAll('.card, section').forEach((el, index) => {
+				(el as HTMLElement).style.transition = `all 0.5s cubic-bezier(0.4, 0, 0.2, 1) ${index * 0.03}s`;
+			});
 		}, 100);
 
-		// Card transition (delay 0.2s)
 		setTimeout(() => {
-			document.querySelectorAll('.card').forEach(card => {
-				card.classList.add('transition-card');
+			// Text elements
+			document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, span, a, li, button').forEach((el, index) => {
+				(el as HTMLElement).style.transition = `color 0.4s cubic-bezier(0.4, 0, 0.2, 1) ${index * 0.01}s`;
 			});
-		}, 200);
+		}, 150);
 
-		// Text transition (delay 0.3s)
+		// Clean up transitions after animation completes
 		setTimeout(() => {
-			document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, span, a, li').forEach(textElement => {
-				textElement.classList.add('transition-text');
+			document.body.classList.remove('theme-transitioning');
+			document.documentElement.style.transition = '';
+			
+			// Reset individual element transitions
+			document.querySelectorAll('*').forEach(el => {
+				(el as HTMLElement).style.transition = '';
 			});
-		}, 300);
-
-		// Remove transition classes after animation completes
-		setTimeout(() => {
-			document.body.classList.remove('theme-changing');
-			const navbar = document.querySelector('nav');
-			if (navbar) {
-				navbar.classList.remove('transition-nav');
-			}
-			document.querySelectorAll('.card').forEach(card => {
-				card.classList.remove('transition-card');
-			});
-			document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, span, a, li').forEach(textElement => {
-				textElement.classList.remove('transition-text');
-			});
-		}, 800); // Total transition duration + some buffer
+			
+			isTransitioning = false;
+		}, 1000);
 	}
 </script>
 
-<button onclick={toggleTheme} class="btn btn-ghost btn-circle">
+<button 
+	onclick={toggleTheme} 
+	class="btn btn-ghost btn-circle transition-all duration-300 hover:scale-110 hover:bg-base-200 {isTransitioning ? 'animate-pulse' : ''}"
+	disabled={isTransitioning}
+>
     {#if theme === 'light'}
-        <i class="fas fa-moon text-lg theme-icon-dark"></i>
+        <i class="fas fa-moon text-lg transition-all duration-300 hover:text-primary"></i>
     {:else}
-        <i class="fas fa-sun text-lg theme-icon-light"></i>
+        <i class="fas fa-sun text-lg transition-all duration-300 hover:text-warning"></i>
     {/if}
 </button>

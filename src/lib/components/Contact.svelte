@@ -147,8 +147,9 @@
 						{/if}
 
 						<form onsubmit={handleSubmit} class="space-y-6">
-							<div class="grid md:grid-cols-2 gap-6">
-								<div class="form-control">
+							<!-- Name Fields Row -->
+							<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+								<div class="form-control w-full">
 									<label for="firstName" class="label">
 										<span class="label-text font-semibold text-lg">{contact.form.firstName.label}</span>
 									</label>
@@ -157,11 +158,11 @@
 										id="firstName"
 										name="firstName"
 										placeholder={contact.form.firstName.placeholder}
-										class="input input-bordered input-lg focus:input-primary transition-all duration-300"
+										class="input input-bordered input-lg w-full focus:input-primary focus:border-primary transition-all duration-300 hover:border-primary/50"
 										required
 									/>
 								</div>
-								<div class="form-control">
+								<div class="form-control w-full">
 									<label for="lastName" class="label">
 										<span class="label-text font-semibold text-lg">{contact.form.lastName.label}</span>
 									</label>
@@ -170,12 +171,14 @@
 										id="lastName"
 										name="lastName"
 										placeholder={contact.form.lastName.placeholder}
-										class="input input-bordered input-lg focus:input-primary transition-all duration-300"
+										class="input input-bordered input-lg w-full focus:input-primary focus:border-primary transition-all duration-300 hover:border-primary/50"
 										required
 									/>
 								</div>
 							</div>
-							<div class="form-control">
+
+							<!-- Email Field -->
+							<div class="form-control w-full">
 								<label for="email" class="label">
 									<span class="label-text font-semibold text-lg">{contact.form.email.label}</span>
 								</label>
@@ -184,11 +187,13 @@
 									id="email"
 									name="email"
 									placeholder={contact.form.email.placeholder}
-									class="input input-bordered input-lg focus:input-primary transition-all duration-300"
+									class="input input-bordered input-lg w-full focus:input-primary focus:border-primary transition-all duration-300 hover:border-primary/50"
 									required
 								/>
 							</div>
-							<div class="form-control">
+
+							<!-- Subject Field -->
+							<div class="form-control w-full">
 								<label for="subject" class="label">
 									<span class="label-text font-semibold text-lg">{contact.form.subject.label}</span>
 								</label>
@@ -197,25 +202,29 @@
 									id="subject"
 									name="subject"
 									placeholder={contact.form.subject.placeholder}
-									class="input input-bordered input-lg focus:input-primary transition-all duration-300"
+									class="input input-bordered input-lg w-full focus:input-primary focus:border-primary transition-all duration-300 hover:border-primary/50"
 									required
 								/>
 							</div>
-							<div class="form-control">
+
+							<!-- Message Field -->
+							<div class="form-control w-full">
 								<label for="message" class="label">
 									<span class="label-text font-semibold text-lg">{contact.form.message.label}</span>
 								</label>
 								<textarea
 									id="message"
 									name="message"
-									class="textarea textarea-bordered textarea-lg focus:textarea-primary h-40 transition-all duration-300"
+									class="textarea textarea-bordered textarea-lg w-full focus:textarea-primary focus:border-primary h-40 transition-all duration-300 hover:border-primary/50 resize-none"
 									placeholder={contact.form.message.placeholder}
 									required
 								></textarea>
 							</div>
+
+							<!-- Submit Button -->
 							<button 
 								type="submit" 
-								class="btn btn-primary btn-lg btn-block hover-lift text-lg shadow-lg bg-gradient-to-r from-primary to-secondary border-none" 
+								class="btn btn-primary btn-lg w-full hover-lift text-lg shadow-lg bg-gradient-to-r from-primary to-secondary border-none transition-all duration-300 hover:shadow-xl hover:scale-[1.02]" 
 								disabled={loading}
 							>
 								{#if loading}
