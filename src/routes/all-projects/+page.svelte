@@ -8,6 +8,7 @@
     interface Project {
         title: string;
         slug: string;
+        top?: number;
         imageUrl: string;
         tech: string;
         description: string;
@@ -23,6 +24,10 @@
     let filteredProjects: Project[] = $state(allProjects);
     let selectedCategory = $state('All');
 
+    // Filter out top projects for all-projects page (show only non-top projects)
+    const nonTopProjects = allProjects.filter(project => !project.top);
+    filteredProjects = nonTopProjects;
+
     let showModal = $state(false);
     let selectedProject: Project | null = $state(null);
 
@@ -31,10 +36,11 @@
 
     function filterProjects(category: string) {
         selectedCategory = category;
+        const projectsToFilter = nonTopProjects; // Only filter non-top projects
         if (category === 'All') {
-            filteredProjects = allProjects;
+            filteredProjects = projectsToFilter;
         } else {
-            filteredProjects = allProjects.filter(project => project.tags.includes(category));
+            filteredProjects = projectsToFilter.filter(project => project.tags.includes(category));
         }
     }
 
@@ -101,7 +107,7 @@
                                 {category}
                                 {#if category !== 'All'}
                                     <span class="badge badge-sm ml-2">
-                                        {allProjects.filter(p => p.tags.includes(category)).length}
+                                        {nonTopProjects.filter(p => p.tags.includes(category)).length}
                                     </span>
                                 {/if}
                             </button>

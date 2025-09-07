@@ -98,13 +98,15 @@
         </div>
 
         <!-- Close Button -->
-        <button 
-            onclick={closeModal} 
-            class="btn btn-circle btn-ghost absolute top-4 right-4 z-20 hover:btn-error transition-colors duration-300 shadow-lg"
-            aria-label="Close modal"
-        >
-            <i class="fas fa-times text-xl"></i>
-        </button>
+        <div class="sticky top-0 right-0 z-30 flex justify-end p-4">
+            <button 
+                onclick={closeModal} 
+                class="btn btn-circle btn-ghost hover:btn-error transition-colors duration-300 shadow-lg bg-base-100/80 backdrop-blur-sm"
+                aria-label="Close modal"
+            >
+                <i class="fas fa-times text-xl"></i>
+            </button>
+        </div>
 
         <div class="relative z-10 overflow-y-auto max-h-[85vh] custom-scrollbar">
             <!-- Project Header -->
