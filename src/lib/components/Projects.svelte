@@ -1,9 +1,11 @@
 <script lang="ts">
 	import { scrollAnimation } from '$lib/actions/scrollAnimation';
+	import ProjectDetailModal from '$lib/components/ProjectDetailModal.svelte';
 
 	interface Project {
 		title: string;
 		slug: string;
+		top?: number;
 		imageUrl: string;
 		tech: string;
 		description: string;
@@ -18,6 +20,22 @@
 		projects: { projects: Project[] };
 		projectsOverview: any;
 	}>();
+
+	let showModal = $state(false);
+	let selectedProject: Project | null = $state(null);
+
+	// Filter only top 3 projects for home page
+	const topProjects = projects.projects.filter(p => p.top).sort((a, b) => (a.top || 0) - (b.top || 0));
+
+	function openProjectModal(project: Project) {
+		selectedProject = project;
+		showModal = true;
+	}
+
+	function closeProjectModal() {
+		showModal = false;
+		selectedProject = null;
+	}
 </script>
 
 <section id="projects" class="py-20 bg-gradient-to-br from-base-100 via-primary/5 to-secondary/5 relative overflow-hidden">
@@ -39,7 +57,7 @@
 
 		<!-- Featured Projects Grid -->
 		<div class="grid lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
-			{#each projects.projects as project, index}
+			{#each topProjects as project, index}
 				<div use:scrollAnimation class="animate-on-scroll group">
 					<div class="card bg-base-100/80 backdrop-blur-sm shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-2 border border-base-300/50 overflow-hidden">
 						<!-- Project Image with Overlay -->
@@ -122,7 +140,10 @@
 									<i class="fas fa-calendar-alt"></i>
 									<span>{new Date(project.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short' })}</span>
 								</div>
-								<button class="btn btn-ghost btn-sm group-hover:btn-primary transition-colors duration-300">
+								<button 
+									onclick={() => openProjectModal(project)}
+									class="btn btn-ghost btn-sm group-hover:btn-primary transition-colors duration-300"
+								>
 									Learn More
 									<i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
 								</button>
@@ -166,3 +187,7 @@
 		</div>
 	</div>
 </section>
+
+{#if showModal && selectedProject}
+	<ProjectDetailModal project={selectedProject} on:close={closeProjectModal} />
+{/if}

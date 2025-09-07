@@ -4,6 +4,7 @@
         {
             "title": "E-commerce Platform",
             "slug": "e-commerce-platform",
+            "top": 1,
             "imageUrl": "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
             "tech": "React • Node.js • MongoDB",
             "description": "Full-featured e-commerce platform with payment integration, inventory management, and analytics dashboard.",
@@ -32,6 +33,7 @@
         {
             "title": "Task Management App",
             "slug": "task-management-app",
+            "top": 2,
             "imageUrl": "https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=800",
             "tech": "Vue.js • Express • PostgreSQL",
             "description": "Collaborative task management application with real-time updates, team collaboration features, and advanced filtering.",
@@ -60,6 +62,7 @@
         {
             "title": "AI Weather Companion",
             "slug": "ai-weather-companion",
+            "top": 3,
             "imageUrl": "https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg?auto=compress&cs=tinysrgb&w=800",
             "tech": "React • Python • OpenAI API",
             "description": "Intelligent weather application with AI-powered recommendations and beautiful data visualizations.",
