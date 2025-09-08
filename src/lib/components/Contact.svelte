@@ -35,8 +35,11 @@
 				window.open('#', '_blank');
 				break;
 			case 'resume':
-				// Download resume (placeholder)
-				window.open('#', '_blank');
+				// Download CV
+				const link = document.createElement('a');
+				link.href = '/cv.pdf';
+				link.download = 'Akram_Dris_CV.pdf';
+				link.click();
 				break;
 			case 'chat':
 				// Scroll to form
