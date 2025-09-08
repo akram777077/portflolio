@@ -85,6 +85,15 @@
 			</ul>
 		</div>
 		<div class="navbar-end">
+			<a 
+				href="/cv.pdf" 
+				download="Akram_Dris_CV.pdf"
+				class="btn btn-ghost btn-sm mr-2 hover:btn-primary transition-colors duration-300"
+				aria-label="Download CV"
+			>
+				<i class="fas fa-download mr-1"></i>
+				<span class="hidden sm:inline">CV</span>
+			</a>
 			<ThemeToggle />
 		</div>
 	</div>
