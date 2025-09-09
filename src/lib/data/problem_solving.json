@@ -1,62 +1,29 @@
 {
     "title": "Problem Solving",
     "subtitle": "Competitive Programming & Algorithm Mastery",
-    "description": "Passionate about solving algorithmic challenges and competitive programming. Here's my journey through various coding platforms:",
-    "codeforces": {
-        "title": "Codeforces Profile",
-        "rating": 1547,
-        "rank": "Expert",
-        "maxRating": 1623,
-        "contestsParticipated": 45,
-        "problemsSolved": 312,
-        "profileUrl": "https://codeforces.com/profile/your-username",
-        "color": "#3b82f6"
-    },
-    "leetcode": {
-        "title": "LeetCode Progress",
-        "profileUrl": "https://leetcode.com/your-username/",
-        "problems": {
-            "easy": {
-                "solved": 145,
-                "total": 200,
-                "percentage": 72.5,
-                "color": "#10b981",
-                "url": "https://leetcode.com/problemset/all/?difficulty=Easy"
-            },
-            "medium": {
-                "solved": 89,
-                "total": 150,
-                "percentage": 59.3,
-                "color": "#f59e0b",
-                "url": "https://leetcode.com/problemset/all/?difficulty=Medium"
-            },
-            "hard": {
-                "solved": 23,
-                "total": 80,
-                "percentage": 28.8,
-                "color": "#ef4444",
-                "url": "https://leetcode.com/problemset/all/?difficulty=Hard"
-            }
-        }
-    },
-    "achievements": [
-        {
-            "metric": "1547",
-            "label": "Codeforces Rating",
-            "description": "Expert level competitive programmer",
-            "icon": "fas fa-trophy"
+    "description": "Passionate about solving algorithmic challenges and competitive programming across various platforms.",
+    "totalProblems": 257,
+    "currentRating": 1547,
+    "maxRating": 1623,
+    "contestsParticipated": 45,
+    "problems": {
+        "easy": {
+            "solved": 145,
+            "total": 200,
+            "percentage": 72.5,
+            "color": "#10b981"
         },
-        {
-            "metric": "257+",
-            "label": "Problems Solved",
-            "description": "Across multiple platforms",
-            "icon": "fas fa-code"
+        "medium": {
+            "solved": 89,
+            "total": 150,
+            "percentage": 59.3,
+            "color": "#f59e0b"
         },
-        {
-            "metric": "45+",
-            "label": "Contests",
-            "description": "Participated in competitive programming",
-            "icon": "fas fa-medal"
+        "hard": {
+            "solved": 23,
+            "total": 80,
+            "percentage": 28.8,
+            "color": "#ef4444"
         }
-    ]
+    }
 }

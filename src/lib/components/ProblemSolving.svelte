@@ -38,9 +38,9 @@
 <section id="problem-solving" class="py-20 bg-gradient-to-br from-base-100 via-primary/5 to-secondary/5 relative overflow-hidden">
 	<!-- Background Elements -->
 	<div class="absolute inset-0 opacity-10">
-		<div class="absolute top-20 left-10 w-32 h-32 bg-blue-500 rounded-full blur-3xl"></div>
-		<div class="absolute bottom-20 right-10 w-40 h-40 bg-purple-500 rounded-full blur-3xl"></div>
-		<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-green-500 rounded-full blur-3xl opacity-30"></div>
+		<div class="absolute top-20 left-10 w-32 h-32 bg-primary rounded-full blur-3xl"></div>
+		<div class="absolute bottom-20 right-10 w-40 h-40 bg-secondary rounded-full blur-3xl"></div>
+		<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-accent rounded-full blur-3xl opacity-30"></div>
 	</div>
 
 	<div class="container mx-auto px-6 relative z-10">
@@ -56,78 +56,54 @@
 			</div>
 		</div>
 
-		<!-- Codeforces Section -->
+		<!-- Main Stats -->
 		<div use:scrollAnimation class="animate-on-scroll mb-16">
-			<div class="card bg-gradient-to-r from-blue-500/10 to-purple-500/10 shadow-2xl border border-blue-500/20">
-				<div class="card-body p-8">
-					<div class="flex flex-col lg:flex-row items-center gap-8">
-						<!-- Codeforces Logo and Info -->
-						<div class="text-center lg:text-left">
-							<div class="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mb-4 mx-auto lg:mx-0">
-								<i class="fas fa-code text-white text-2xl"></i>
-							</div>
-							<h3 class="text-3xl font-bold mb-2 gradient-text">{problemSolving.codeforces.title}</h3>
-							<a 
-								href={problemSolving.codeforces.profileUrl} 
-								target="_blank" 
-								rel="noopener noreferrer"
-								class="btn btn-primary btn-sm hover:scale-105 transition-transform duration-300"
-							>
-								<i class="fas fa-external-link-alt mr-2"></i>
-								View Profile
-							</a>
-						</div>
+			<div class="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+				<!-- Total Problems -->
+				<div class="card bg-gradient-to-r from-primary/10 to-secondary/10 shadow-xl border border-primary/20">
+					<div class="card-body text-center p-6">
+						<div class="text-4xl font-bold gradient-text mb-2">{problemSolving.totalProblems}</div>
+						<div class="text-sm text-base-content/70">Total Problems</div>
+					</div>
+				</div>
 
-						<!-- Codeforces Stats -->
-						<div class="flex-1 grid grid-cols-2 md:grid-cols-4 gap-6">
-							<div class="text-center">
-								<div class="text-3xl font-bold text-blue-500 mb-1">{problemSolving.codeforces.rating}</div>
-								<div class="text-sm text-base-content/70">Current Rating</div>
-								<div class="badge badge-primary badge-sm mt-1">{problemSolving.codeforces.rank}</div>
-							</div>
-							<div class="text-center">
-								<div class="text-3xl font-bold text-purple-500 mb-1">{problemSolving.codeforces.maxRating}</div>
-								<div class="text-sm text-base-content/70">Max Rating</div>
-							</div>
-							<div class="text-center">
-								<div class="text-3xl font-bold text-green-500 mb-1">{problemSolving.codeforces.contestsParticipated}</div>
-								<div class="text-sm text-base-content/70">Contests</div>
-							</div>
-							<div class="text-center">
-								<div class="text-3xl font-bold text-orange-500 mb-1">{problemSolving.codeforces.problemsSolved}</div>
-								<div class="text-sm text-base-content/70">Problems Solved</div>
-							</div>
-						</div>
+				<!-- Current Rating -->
+				<div class="card bg-gradient-to-r from-secondary/10 to-accent/10 shadow-xl border border-secondary/20">
+					<div class="card-body text-center p-6">
+						<div class="text-4xl font-bold gradient-text mb-2">{problemSolving.currentRating}</div>
+						<div class="text-sm text-base-content/70">Current Rating</div>
+					</div>
+				</div>
+
+				<!-- Max Rating -->
+				<div class="card bg-gradient-to-r from-accent/10 to-warning/10 shadow-xl border border-accent/20">
+					<div class="card-body text-center p-6">
+						<div class="text-4xl font-bold gradient-text mb-2">{problemSolving.maxRating}</div>
+						<div class="text-sm text-base-content/70">Max Rating</div>
+					</div>
+				</div>
+
+				<!-- Contests -->
+				<div class="card bg-gradient-to-r from-warning/10 to-primary/10 shadow-xl border border-warning/20">
+					<div class="card-body text-center p-6">
+						<div class="text-4xl font-bold gradient-text mb-2">{problemSolving.contestsParticipated}</div>
+						<div class="text-sm text-base-content/70">Contests</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<!-- LeetCode Section -->
-		<div use:scrollAnimation class="animate-on-scroll mb-16">
-			<div class="card bg-gradient-to-r from-orange-500/10 to-yellow-500/10 shadow-2xl border border-orange-500/20">
+		<!-- Problem Difficulty Breakdown -->
+		<div use:scrollAnimation class="animate-on-scroll">
+			<div class="card bg-base-100/80 backdrop-blur-sm shadow-2xl border border-base-300/50">
 				<div class="card-body p-8">
-					<div class="text-center mb-8">
-						<div class="w-20 h-20 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full flex items-center justify-center mb-4 mx-auto">
-							<i class="fas fa-laptop-code text-white text-2xl"></i>
-						</div>
-						<h3 class="text-3xl font-bold mb-4 gradient-text">{problemSolving.leetcode.title}</h3>
-						<a 
-							href={problemSolving.leetcode.profileUrl} 
-							target="_blank" 
-							rel="noopener noreferrer"
-							class="btn btn-secondary hover:scale-105 transition-transform duration-300"
-						>
-							<i class="fas fa-external-link-alt mr-2"></i>
-							View LeetCode Profile
-						</a>
-					</div>
-
-					<!-- LeetCode Progress Circles -->
+					<h3 class="text-3xl font-bold text-center mb-8 gradient-text">Problem Difficulty Breakdown</h3>
+					
+					<!-- Circular Progress Indicators -->
 					<div class="grid md:grid-cols-3 gap-8">
-						{#each Object.entries(problemSolving.leetcode.problems) as [difficulty, data]}
+						{#each Object.entries(problemSolving.problems) as [difficulty, data]}
 							<div class="text-center">
-								<div class="relative inline-block mb-4">
+								<div class="relative inline-block mb-6">
 									<!-- Circular Progress SVG -->
 									<div 
 										class="circular-progress relative" 
@@ -162,7 +138,7 @@
 												<div class="text-2xl font-bold" style="color: {data.color}">
 													{data.percentage.toFixed(1)}%
 												</div>
-												<div class="text-xs text-base-content/60 capitalize">
+												<div class="text-xs text-base-content/60 capitalize font-semibold">
 													{difficulty}
 												</div>
 											</div>
@@ -172,48 +148,51 @@
 
 								<!-- Problem Count -->
 								<div class="mb-4">
-									<div class="text-xl font-bold mb-1">
+									<div class="text-2xl font-bold mb-2" style="color: {data.color}">
 										{data.solved} / {data.total}
 									</div>
-									<div class="text-sm text-base-content/70 capitalize mb-3">
+									<div class="text-base text-base-content/70 capitalize font-semibold mb-4">
 										{difficulty} Problems
 									</div>
 								</div>
 
-								<!-- Practice Button -->
-								<a 
-									href={data.url} 
-									target="_blank" 
-									rel="noopener noreferrer"
-									class="btn btn-outline btn-sm hover:scale-105 transition-all duration-300"
-									style="border-color: {data.color}; color: {data.color};"
-								>
-									<i class="fas fa-play mr-2"></i>
-									Practice {difficulty.charAt(0).toUpperCase() + difficulty.slice(1)}
-								</a>
+								<!-- Progress Bar -->
+								<div class="w-full bg-base-300 rounded-full h-3 mb-4">
+									<div 
+										class="h-3 rounded-full transition-all duration-2000 ease-out"
+										style="background-color: {data.color}; width: {data.percentage}%"
+									></div>
+								</div>
+
+								<!-- Stats -->
+								<div class="text-sm text-base-content/60">
+									<div>Solved: <span class="font-semibold">{data.solved}</span></div>
+									<div>Remaining: <span class="font-semibold">{data.total - data.solved}</span></div>
+								</div>
 							</div>
 						{/each}
 					</div>
-				</div>
-			</div>
-		</div>
 
-		<!-- Achievements Stats -->
-		<div use:scrollAnimation class="animate-on-scroll">
-			<div class="card bg-gradient-to-r from-primary/10 to-secondary/10 shadow-xl">
-				<div class="card-body">
-					<h3 class="text-2xl font-bold text-center mb-8">Competitive Programming Achievements</h3>
-					<div class="grid md:grid-cols-3 gap-8">
-						{#each problemSolving.achievements as achievement}
-							<div class="text-center group">
-								<div class="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-									<i class="{achievement.icon} text-white text-xl"></i>
+					<!-- Overall Progress -->
+					<div class="mt-12 pt-8 border-t border-base-300">
+						<div class="text-center">
+							<h4 class="text-xl font-bold mb-4">Overall Progress</h4>
+							<div class="max-w-md mx-auto">
+								<div class="flex justify-between text-sm mb-2">
+									<span>Total Solved</span>
+									<span class="font-bold">{problemSolving.problems.easy.solved + problemSolving.problems.medium.solved + problemSolving.problems.hard.solved} / {problemSolving.problems.easy.total + problemSolving.problems.medium.total + problemSolving.problems.hard.total}</span>
 								</div>
-								<div class="text-4xl font-bold gradient-text mb-2">{achievement.metric}</div>
-								<div class="text-lg font-semibold mb-1">{achievement.label}</div>
-								<div class="text-sm text-base-content/70">{achievement.description}</div>
+								<div class="w-full bg-base-300 rounded-full h-4">
+									<div 
+										class="h-4 rounded-full bg-gradient-to-r from-primary to-secondary transition-all duration-2000 ease-out"
+										style="width: {((problemSolving.problems.easy.solved + problemSolving.problems.medium.solved + problemSolving.problems.hard.solved) / (problemSolving.problems.easy.total + problemSolving.problems.medium.total + problemSolving.problems.hard.total) * 100).toFixed(1)}%"
+									></div>
+								</div>
+								<div class="text-sm text-base-content/60 mt-2">
+									{((problemSolving.problems.easy.solved + problemSolving.problems.medium.solved + problemSolving.problems.hard.solved) / (problemSolving.problems.easy.total + problemSolving.problems.medium.total + problemSolving.problems.hard.total) * 100).toFixed(1)}% Complete
+								</div>
 							</div>
-						{/each}
+						</div>
 					</div>
 				</div>
 			</div>
