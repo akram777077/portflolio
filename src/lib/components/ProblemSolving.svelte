@@ -62,8 +62,8 @@
 				<!-- Total Problems -->
 				<div class="card bg-gradient-to-r from-primary/10 to-secondary/10 shadow-xl border border-primary/20">
 					<div class="card-body text-center p-6">
-						<div class="text-4xl font-bold gradient-text mb-2">{problemSolving.totalProblems}</div>
-						<div class="text-sm text-base-content/70">Total Problems</div>
+						<div class="text-4xl font-bold gradient-text mb-2">{problemSolving.totalSolved}</div>
+						<div class="text-sm text-base-content/70">Problems Solved</div>
 					</div>
 				</div>
 
@@ -135,8 +135,8 @@
 										<!-- Percentage Text -->
 										<div class="absolute inset-0 flex items-center justify-center">
 											<div class="text-center">
-												<div class="text-2xl font-bold" style="color: {data.color}">
-													{data.percentage.toFixed(1)}%
+												<div class="text-xl font-bold" style="color: {data.color}">
+													{data.solved}
 												</div>
 												<div class="text-xs text-base-content/60 capitalize font-semibold">
 													{difficulty}
@@ -149,7 +149,7 @@
 								<!-- Problem Count -->
 								<div class="mb-4">
 									<div class="text-2xl font-bold mb-2" style="color: {data.color}">
-										{data.solved} / {data.total}
+										{data.solved}
 									</div>
 									<div class="text-base text-base-content/70 capitalize font-semibold mb-4">
 										{difficulty} Problems
@@ -157,8 +157,8 @@
 								</div>
 
 								<!-- Progress Bar -->
-								<div class="w-full bg-base-300 rounded-full h-3 mb-4">
-									<div 
+					<div>Count: <span class="font-semibold">{data.solved}</span></div>
+					<div>Percentage: <span class="font-semibold">{data.percentage}%</span></div>
 										class="h-3 rounded-full transition-all duration-2000 ease-out"
 										style="background-color: {data.color}; width: {data.percentage}%"
 									></div>
@@ -177,24 +177,15 @@
 					<div class="mt-12 pt-8 border-t border-base-300">
 						<div class="text-center">
 							<h4 class="text-xl font-bold mb-4">Overall Progress</h4>
-							<div class="max-w-md mx-auto">
-								<div class="flex justify-between text-sm mb-2">
-									<span>Total Solved</span>
-									<span class="font-bold">{problemSolving.problems.easy.solved + problemSolving.problems.medium.solved + problemSolving.problems.hard.solved} / {problemSolving.problems.easy.total + problemSolving.problems.medium.total + problemSolving.problems.hard.total}</span>
-								</div>
-								<div class="w-full bg-base-300 rounded-full h-4">
-									<div 
-										class="h-4 rounded-full bg-gradient-to-r from-primary to-secondary transition-all duration-2000 ease-out"
-										style="width: {((problemSolving.problems.easy.solved + problemSolving.problems.medium.solved + problemSolving.problems.hard.solved) / (problemSolving.problems.easy.total + problemSolving.problems.medium.total + problemSolving.problems.hard.total) * 100).toFixed(1)}%"
-									></div>
-								</div>
-								<div class="text-sm text-base-content/60 mt-2">
-									{((problemSolving.problems.easy.solved + problemSolving.problems.medium.solved + problemSolving.problems.hard.solved) / (problemSolving.problems.easy.total + problemSolving.problems.medium.total + problemSolving.problems.hard.total) * 100).toFixed(1)}% Complete
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+	<!-- Distribution Summary -->
+	<div class="mt-12 pt-8 border-t border-base-300">
+		<div class="text-center">
+			<h4 class="text-xl font-bold mb-4">Problem Distribution</h4>
+			<div class="text-lg text-base-content/70">
+				Out of <span class="font-bold gradient-text">{problemSolving.totalSolved}</span> problems solved:
+				<span class="font-semibold" style="color: {problemSolving.problems.easy.color}">{problemSolving.problems.easy.solved} Easy</span>, 
+				<span class="font-semibold" style="color: {problemSolving.problems.medium.color}">{problemSolving.problems.medium.solved} Medium</span>, 
+				<span class="font-semibold" style="color: {problemSolving.problems.hard.color}">{problemSolving.problems.hard.solved} Hard</span>
 			</div>
 		</div>
 	</div>

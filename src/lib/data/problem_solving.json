@@ -2,27 +2,24 @@
     "title": "Problem Solving",
     "subtitle": "Competitive Programming & Algorithm Mastery",
     "description": "Passionate about solving algorithmic challenges and competitive programming across various platforms.",
-    "totalProblems": 257,
+    "totalSolved": 500,
     "currentRating": 1547,
     "maxRating": 1623,
     "contestsParticipated": 45,
     "problems": {
         "easy": {
-            "solved": 145,
-            "total": 200,
-            "percentage": 72.5,
+            "solved": 200,
+            "percentage": 40,
             "color": "#10b981"
         },
         "medium": {
-            "solved": 89,
-            "total": 150,
-            "percentage": 59.3,
+            "solved": 200,
+            "percentage": 40,
             "color": "#f59e0b"
         },
         "hard": {
-            "solved": 23,
-            "total": 80,
-            "percentage": 28.8,
+            "solved": 100,
+            "percentage": 20,
             "color": "#ef4444"
         }
     }
