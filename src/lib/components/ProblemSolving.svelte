@@ -146,28 +146,28 @@
 									</div>
 								</div>
 
-								<!-- Problem Count -->
-								<div class="mb-4">
+								<!-- Problem Count and Stats -->
+								<div class="space-y-2">
 									<div class="text-2xl font-bold mb-2" style="color: {data.color}">
 										{data.solved}
 									</div>
 									<div class="text-base text-base-content/70 capitalize font-semibold mb-4">
 										{difficulty} Problems
 									</div>
-								</div>
-
-								<!-- Progress Bar -->
-					<div>Count: <span class="font-semibold">{data.solved}</span></div>
-					<div>Percentage: <span class="font-semibold">{data.percentage}%</span></div>
-										class="h-3 rounded-full transition-all duration-2000 ease-out"
-										style="background-color: {data.color}; width: {data.percentage}%"
-									></div>
-								</div>
-									<div>Solved: <span class="font-semibold">{data.solved} / {problemSolving.totalSolved}</span></div>
-									<div>Percentage: <span class="font-semibold">{data.percentage}%</span></div>
-								<div class="text-sm text-base-content/60">
-									<div>Solved: <span class="font-semibold">{data.solved}</span></div>
-									<div>Remaining: <span class="font-semibold">{data.total - data.solved}</span></div>
+									
+									<!-- Progress Bar -->
+									<div class="w-full bg-base-300 rounded-full h-3 mb-4">
+										<div 
+											class="h-3 rounded-full transition-all duration-2000 ease-out"
+											style="background-color: {data.color}; width: {data.percentage}%"
+										></div>
+									</div>
+									
+									<!-- Statistics -->
+									<div class="text-sm text-base-content/60 space-y-1">
+										<div>Solved: <span class="font-semibold">{data.solved} / {problemSolving.totalSolved}</span></div>
+										<div>Percentage: <span class="font-semibold">{data.percentage}%</span></div>
+									</div>
 								</div>
 							</div>
 						{/each}
