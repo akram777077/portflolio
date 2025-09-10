@@ -163,8 +163,8 @@
 										style="background-color: {data.color}; width: {data.percentage}%"
 									></div>
 								</div>
-
-								<!-- Stats -->
+									<div>Solved: <span class="font-semibold">{data.solved} / {problemSolving.totalSolved}</span></div>
+									<div>Percentage: <span class="font-semibold">{data.percentage}%</span></div>
 								<div class="text-sm text-base-content/60">
 									<div>Solved: <span class="font-semibold">{data.solved}</span></div>
 									<div>Remaining: <span class="font-semibold">{data.total - data.solved}</span></div>
@@ -173,19 +173,19 @@
 						{/each}
 					</div>
 
-					<!-- Overall Progress -->
+					<!-- Distribution Summary -->
 					<div class="mt-12 pt-8 border-t border-base-300">
 						<div class="text-center">
-							<h4 class="text-xl font-bold mb-4">Overall Progress</h4>
-	<!-- Distribution Summary -->
-	<div class="mt-12 pt-8 border-t border-base-300">
-		<div class="text-center">
-			<h4 class="text-xl font-bold mb-4">Problem Distribution</h4>
-			<div class="text-lg text-base-content/70">
-				Out of <span class="font-bold gradient-text">{problemSolving.totalSolved}</span> problems solved:
-				<span class="font-semibold" style="color: {problemSolving.problems.easy.color}">{problemSolving.problems.easy.solved} Easy</span>, 
-				<span class="font-semibold" style="color: {problemSolving.problems.medium.color}">{problemSolving.problems.medium.solved} Medium</span>, 
-				<span class="font-semibold" style="color: {problemSolving.problems.hard.color}">{problemSolving.problems.hard.solved} Hard</span>
+							<h4 class="text-xl font-bold mb-4">Problem Distribution</h4>
+							<div class="text-lg text-base-content/70">
+								Out of <span class="font-bold gradient-text">{problemSolving.totalSolved}</span> problems solved:
+								<span class="font-semibold" style="color: {problemSolving.problems.easy.color}">{problemSolving.problems.easy.solved} Easy</span>, 
+								<span class="font-semibold" style="color: {problemSolving.problems.medium.color}">{problemSolving.problems.medium.solved} Medium</span>, 
+								<span class="font-semibold" style="color: {problemSolving.problems.hard.color}">{problemSolving.problems.hard.solved} Hard</span>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
